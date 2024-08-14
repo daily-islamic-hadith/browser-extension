@@ -1,0 +1,52 @@
+/* styles.css */
+body {
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 10px;
+    min-width: 500px;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header img {
+    margin-right: 10px;
+}
+
+.header h2 {
+    margin: 0;
+    color: #333;
+}
+
+#hadith-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#hadith {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-family: 'Amiri', serif;
+    direction: rtl;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
