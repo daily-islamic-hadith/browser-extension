@@ -37,6 +37,14 @@ body {
     direction: rtl;
 }
 
+#go-to-options {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 32px;
+}
+
 button {
     margin-top: 15px;
     padding: 10px 20px;

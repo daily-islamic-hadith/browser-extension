@@ -7,7 +7,12 @@
     "default_popup": "popup/popup.html",
     "default_icon": "images/icon.png"
   },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": false
+  },
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
   ]
 }

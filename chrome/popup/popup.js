@@ -5,7 +5,18 @@ document.addEventListener('DOMContentLoaded', function () {
         fetch('https://marine-diane-daily-hadith-c60e1c0d.koyeb.app/today-hadith')
             .then(response => response.json())
             .then(data => {
-                hadithElement.textContent = data.hadithArabic;
+                chrome.storage.sync.get(
+                    {preferredHadithLang: 'arabic'},
+                    (item) => {
+                        if (item.preferredHadithLang === 'english') {
+                            hadithElement.textContent = data.hadithEnglish;
+                            hadithElement.style.direction = "ltr";
+                        } else {
+                            hadithElement.textContent = data.hadithArabic;
+                            hadithElement.style.direction = "rtl";
+                        }
+                    }
+                );
             })
             .catch(error => {
                 hadithElement.textContent = 'Failed to load Hadith.';
@@ -15,4 +26,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Fetch Hadith on page load
     fetchHadith();
+});
+
+document.querySelector('#go-to-options').addEventListener('click', function () {
+    if (chrome.runtime.openOptionsPage) {
+        chrome.runtime.openOptionsPage();
+    } else {
+        window.open(chrome.runtime.getURL('options.html'));
+    }
 });
