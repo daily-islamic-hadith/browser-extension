@@ -26,6 +26,17 @@
 4. Click "Load unpacked" and select the cloned/downloaded directory.
 5. The extension should now be installed and ready to use.
 
+### Firefox
+
+1. Clone or download the repository.
+    ```bash
+    git clone https://github.com/osama1225/daily-islamic-hadith-extensions.git
+    ```
+2. Open `about:debugging` in your Firefox browser.
+3. Click on "This Firefox" on the left panel.
+4. Click "Load Temporary Add-on" and select the `manifest.json` file from the cloned/downloaded directory.
+5. The extension should now be installed and ready to use.
+
 ## Usage
 
 Once installed, the extension will automatically display a new Hadith each day in your browser. You can customize the settings by clicking on the extension icon and navigating to the options menu.
