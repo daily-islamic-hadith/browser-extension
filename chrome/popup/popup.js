@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         fetch('https://marine-diane-daily-hadith-c60e1c0d.koyeb.app/today-hadith')
             .then(response => response.json())
             .then(data => {
-                chrome.storage.sync.get(
+                chrome.storage.local.get(
                     {preferredHadithLang: 'arabic'},
                     (item) => {
                         if (item.preferredHadithLang === 'english') {
