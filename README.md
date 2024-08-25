@@ -27,7 +27,10 @@
 5. The extension should now be installed and ready to use.
 
 ### Firefox
+#### Addons store
+You can install the extension from the firefox add-ons store from [here](https://addons.mozilla.org/en-US/firefox/addon/daily-islamic-hadith/).
 
+#### Manually
 1. Clone or download the repository.
     ```bash
     git clone https://github.com/osama1225/daily-islamic-hadith-extensions.git

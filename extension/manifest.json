@@ -14,5 +14,11 @@
   "permissions": [
     "activeTab",
     "storage"
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "daily-islamic-hadith@line.pm",
+      "strict_min_version": "109.0"
+    }
+  }
 }
