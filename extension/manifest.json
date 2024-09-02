@@ -3,9 +3,14 @@
   "name": "Daily Islamic Hadith",
   "description": "Get daily Islamic hadith directly from your browser.",
   "version": "1.0",
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
   "action": {
-    "default_popup": "popup/popup.html",
-    "default_icon": "images/icon.png"
+    "default_popup": "popup/popup.html"
   },
   "options_ui": {
     "page": "options/options.html",
