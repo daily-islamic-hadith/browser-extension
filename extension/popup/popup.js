@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const hadithElement = document.getElementById('hadith');
 
     function fetchHadith() {
-        fetch('https://marine-diane-daily-hadith-c60e1c0d.koyeb.app/api/today-hadith')
+        fetch('https://dailyislamichadith.com/api/today-hadith')
             .then(response => response.json())
             .then(data => {
                 chrome.storage.local.get(
