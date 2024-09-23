@@ -16,6 +16,10 @@
 ## Installation
 
 ### Chrome
+#### Chrome Web Store
+You can install the extension from the chrome web store from [here](https://chromewebstore.google.com/detail/daily-islamic-hadith/jgofbnjkimhpkjeimcedipdeecegdkpp).
+
+#### Manually
 
 1. Clone or download the repository.
     ```bash
