@@ -25,10 +25,10 @@
         }
 
         h1 {
-            font-size: 20px;
-            margin-bottom: 20px;
+            font-size: 15px;
+            margin-bottom: 15px;
             color: #333;
-            text-align: center;
+            text-align: left;
         }
 
         select {
@@ -70,6 +70,11 @@
     <select id="hadithLang">
         <option value="arabic">Arabic</option>
         <option value="english">English</option>
+    </select>
+    <h1>Hadith Fetch Mode</h1>
+    <select id="hadithFetchMode">
+        <option title="Displays the same Hadith for the entire day. Updates with a new Hadith the next day." value="daily">Daily</option>
+        <option title="Displays a new Hadith each time you open or refresh the extension." value="random">Random</option>
     </select>
     <div id="status"></div>
     <button id="save">Save</button>

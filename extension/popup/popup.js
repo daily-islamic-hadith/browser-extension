@@ -1,31 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     const hadithElement = document.getElementById('hadith');
-
-    function fetchHadith() {
-        fetch('https://dailyislamichadith.com/api/today-hadith')
-            .then(response => response.json())
-            .then(data => {
-                chrome.storage.local.get(
-                    {preferredHadithLang: 'arabic'},
-                    (item) => {
-                        if (item.preferredHadithLang === 'english') {
-                            hadithElement.textContent = data.hadithEnglish;
-                            hadithElement.style.direction = "ltr";
-                        } else {
-                            hadithElement.textContent = data.hadithArabic;
-                            hadithElement.style.direction = "rtl";
-                        }
-                    }
-                );
-            })
-            .catch(error => {
-                hadithElement.textContent = 'Failed to load Hadith.';
-                console.error('Error fetching Hadith:', error);
-            });
-    }
-
     // Fetch Hadith on page load
-    fetchHadith();
+    chrome.storage.local.get(
+        {preferredHadithLang: 'arabic', preferredHadithFetchMode: 'daily'},
+        (item) => {
+            fetchHadith(hadithElement, item.preferredHadithLang, item.preferredHadithFetchMode);
+        }
+    );
 });
 
 document.querySelector('#go-to-options').addEventListener('click', function () {
@@ -35,3 +16,21 @@ document.querySelector('#go-to-options').addEventListener('click', function () {
         window.open(chrome.runtime.getURL('options.html'));
     }
 });
+
+function fetchHadith(hadithElement, hadithLang, hadithFetchMode) {
+    fetch('https://dailyislamichadith.com/api/fetch-hadith?fetch-mode=' + hadithFetchMode)
+        .then(response => response.json())
+        .then(data => {
+            if (hadithLang === 'english') {
+                hadithElement.textContent = data.hadithEnglish;
+                hadithElement.style.direction = "ltr";
+            } else {
+                hadithElement.textContent = data.hadithArabic;
+                hadithElement.style.direction = "rtl";
+            }
+        })
+        .catch(error => {
+            hadithElement.textContent = 'Failed to load Hadith.';
+            console.error('Error fetching Hadith:', error);
+        });
+}
