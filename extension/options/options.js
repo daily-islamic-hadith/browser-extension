@@ -19,7 +19,7 @@ const saveOptions = () => {
 // stored in chrome.storage.
 const restoreOptions = () => {
     chrome.storage.local.get(
-        {preferredHadithLang: 'arabic', preferredHadithFetchMode: 'daily'},
+        {preferredHadithLang: 'ar', preferredHadithFetchMode: 'daily'},
         (items) => {
             document.getElementById('hadithLang').value = items.preferredHadithLang;
             document.getElementById('hadithFetchMode').value = items.preferredHadithFetchMode;
