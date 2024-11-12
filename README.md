@@ -8,7 +8,7 @@
 
 ## Features
 
-- **Daily Hadith**: Receive a new Hadith every day directly in your browser.
+- **Daily Hadith**: Receive a new Hadith with its explanation every day directly in your browser.
 - **Simple and Clean UI**: Easy-to-use interface with minimalistic design.
 - **Language Support**: Supports multiple languages for Hadith display.
 - **Multiple Modes**: Supports multiple modes of displaying Hadith. 
