@@ -14,6 +14,10 @@
 - **Multiple Modes**: Supports multiple modes of displaying Hadith.
 - **Open Source**: Contribute to the development or customize the extension for your needs.
 
+## Changelog
+
+See the full list of releases and updates in the [Release Notes](./RELEASES.md).
+
 ## Installation
 
 ### Chrome
