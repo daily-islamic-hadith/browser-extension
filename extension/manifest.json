@@ -16,9 +16,7 @@
     "page": "options/options.html",
     "open_in_tab": false
   },
-  "permissions": [
-    "storage"
-  ],
+  "permissions": ["storage"],
   "browser_specific_settings": {
     "gecko": {
       "id": "developer@dailyislamichadith.com",

@@ -1,85 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daily Islamic Hadith Options</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-        .options-container {
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            max-width: 300px;
-            width: 100%;
-        }
+      .options-container {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 300px;
+        width: 100%;
+      }
 
-        h1 {
-            font-size: 15px;
-            margin-bottom: 15px;
-            color: #333;
-            text-align: left;
-        }
+      h1 {
+        font-size: 15px;
+        margin-bottom: 15px;
+        color: #333;
+        text-align: left;
+      }
 
-        select {
-            width: 100%;
-            padding: 10px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
+      select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
 
-        #save {
-            width: 100%;
-            padding: 10px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
+      #save {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
 
-        #save:hover {
-            background-color: #218838;
-        }
+      #save:hover {
+        background-color: #218838;
+      }
 
-        #status {
-            margin-bottom: 10px;
-            padding: 10px;
-            font-size: 14px;
-            text-align: center;
-            border-radius: 4px;
-        }
+      #status {
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 14px;
+        text-align: center;
+        border-radius: 4px;
+      }
     </style>
-</head>
-<body>
-<div class="options-container">
-    <h1>Preferred Hadith Language</h1>
-    <select id="hadithLang">
+  </head>
+  <body>
+    <div class="options-container">
+      <h1>Preferred Hadith Language</h1>
+      <select id="hadithLang">
         <option value="ar">Arabic</option>
         <option value="en">English</option>
-    </select>
-    <h1>Hadith Fetch Mode</h1>
-    <select id="hadithFetchMode">
-        <option title="Displays the same Hadith for the entire day. Updates with a new Hadith the next day." value="daily">Daily</option>
-        <option title="Displays a new Hadith each time you open or refresh the extension." value="random">Random</option>
-    </select>
-    <div id="status"></div>
-    <button id="save">Save</button>
-</div>
+      </select>
+      <h1>Hadith Fetch Mode</h1>
+      <select id="hadithFetchMode">
+        <option
+          title="Displays the same Hadith for the entire day. Updates with a new Hadith the next day."
+          value="daily"
+        >
+          Daily
+        </option>
+        <option
+          title="Displays a new Hadith each time you open or refresh the extension."
+          value="random"
+        >
+          Random
+        </option>
+      </select>
+      <div id="status"></div>
+      <button id="save">Save</button>
+    </div>
 
-<script src="options.js"></script>
-</body>
+    <script src="options.js"></script>
+  </body>
 </html>

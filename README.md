@@ -11,35 +11,40 @@
 - **Daily Hadith**: Receive a new Hadith with its explanation every day directly in your browser.
 - **Simple and Clean UI**: Easy-to-use interface with minimalistic design.
 - **Language Support**: Supports multiple languages for Hadith display.
-- **Multiple Modes**: Supports multiple modes of displaying Hadith. 
+- **Multiple Modes**: Supports multiple modes of displaying Hadith.
 - **Open Source**: Contribute to the development or customize the extension for your needs.
 
 ## Installation
 
 ### Chrome
+
 #### Chrome Web Store
+
 You can install the extension from the chrome web store from [here](https://chromewebstore.google.com/detail/daily-islamic-hadith/jgofbnjkimhpkjeimcedipdeecegdkpp).
 
 #### Manually
 
 1. Clone or download the repository.
-    ```bash
-    git clone https://github.com/osama1225/daily-islamic-hadith-extensions.git
-    ```
+   ```bash
+   git clone https://github.com/osama1225/daily-islamic-hadith-extensions.git
+   ```
 2. Open `chrome://extensions/` in your Chrome browser.
 3. Enable "Developer mode" in the top right corner.
 4. Click "Load unpacked" and select the cloned/downloaded directory.
 5. The extension should now be installed and ready to use.
 
 ### Firefox
+
 #### Addons store
+
 You can install the extension from the firefox add-ons store from [here](https://addons.mozilla.org/en-US/firefox/addon/daily-islamic-hadith/).
 
 #### Manually
+
 1. Clone or download the repository.
-    ```bash
-    git clone https://github.com/osama1225/daily-islamic-hadith-extensions.git
-    ```
+   ```bash
+   git clone https://github.com/osama1225/daily-islamic-hadith-extensions.git
+   ```
 2. Open `about:debugging` in your Firefox browser.
 3. Click on "This Firefox" on the left panel.
 4. Click "Load Temporary Add-on" and select the `manifest.json` file from the cloned/downloaded directory.
