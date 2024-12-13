@@ -2,13 +2,17 @@
 const saveOptions = () => {
   const selected_hadith_lang = document.getElementById('hadithLang').value;
   const selected_hadith_mode = document.getElementById('hadithFetchMode').value;
+  const selected_theme = document.getElementById('theme').value;
   chrome.storage.local.set(
     {
       preferredHadithLang: selected_hadith_lang,
       preferredHadithFetchMode: selected_hadith_mode,
+      preferredTheme: selected_theme,
     },
     () => {
-      // Update status to let user know options were saved.
+      const applyDarkMode = selected_theme === 'dark'
+        || (selected_theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      applyTheme(applyDarkMode);
       const status = document.getElementById('status');
       status.textContent = 'Your Preference saved.';
       setTimeout(() => {
@@ -18,18 +22,28 @@ const saveOptions = () => {
   );
 };
 
-// Restores select box and checkbox state using the preferences
-// stored in chrome.storage.
-const restoreOptions = () => {
+const onDomContentLoaded = () => {
   chrome.storage.local.get(
-    { preferredHadithLang: 'ar', preferredHadithFetchMode: 'daily' },
-    (items) => {
-      document.getElementById('hadithLang').value = items.preferredHadithLang;
-      document.getElementById('hadithFetchMode').value =
-        items.preferredHadithFetchMode;
+    { preferredHadithLang: 'ar', preferredHadithFetchMode: 'daily', preferredTheme: 'auto' },
+    (item) => {
+      document.getElementById('hadithLang').value = item.preferredHadithLang;
+      document.getElementById('hadithFetchMode').value = item.preferredHadithFetchMode;
+      document.getElementById('theme').value = item.preferredTheme;
+      const applyDarkMode = item.preferredTheme === 'dark'
+        || (item.preferredTheme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      applyTheme(applyDarkMode);
     }
   );
 };
 
-document.addEventListener('DOMContentLoaded', restoreOptions);
+function applyTheme(darkMode) {
+    if (darkMode) {
+        document.documentElement.classList.add('dark-mode');
+    } else {
+        document.documentElement.classList.remove('dark-mode');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', onDomContentLoaded);
 document.getElementById('save').addEventListener('click', saveOptions);
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => applyTheme(e.matches));

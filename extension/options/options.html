@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daily Islamic Hadith Options</title>
     <style>
+      :root {
+        --save-btn-bg-color: #28a745;
+        --save-btn-bg-color-hover: #218838;
+      }
+      html.dark-mode {
+        filter: invert(1) brightness(0.8);
+        --save-btn-bg-color: #333;
+        --save-btn-bg-color-hover: #222121;
+      }
+
       body {
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
@@ -18,7 +28,7 @@
       .options-container {
         background-color: #ffffff;
         border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         padding: 20px;
         max-width: 300px;
         width: 100%;
@@ -43,7 +53,7 @@
       #save {
         width: 100%;
         padding: 10px;
-        background-color: #28a745;
+        background-color: var(--save-btn-bg-color);
         color: white;
         border: none;
         border-radius: 4px;
@@ -52,7 +62,7 @@
       }
 
       #save:hover {
-        background-color: #218838;
+        background-color: var(--save-btn-bg-color-hover);
       }
 
       #status {
@@ -86,10 +96,30 @@
           Random
         </option>
       </select>
+      <h1>Theme</h1>
+      <select id="theme">
+        <option
+          value="auto"
+          title="Automatically adjusts to your system's color scheme preference (light or dark)."
+        >
+          Auto
+        </option>
+        <option
+          value="light"
+          title="Switches to a light theme with a light background and dark text."
+        >
+          Light
+        </option>
+        <option
+          value="dark"
+          title="Switches to a dark theme with a dark background and light text."
+        >
+          Dark
+        </option>
+      </select>
       <div id="status"></div>
       <button id="save">Save</button>
     </div>
-
     <script src="options.js"></script>
   </body>
 </html>

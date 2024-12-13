@@ -4,8 +4,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const summaryElement = document.getElementById('summary-title');
   // Fetch Hadith on page load
   chrome.storage.local.get(
-    { preferredHadithLang: 'ar', preferredHadithFetchMode: 'daily' },
+    { preferredHadithLang: 'ar', preferredHadithFetchMode: 'daily', preferredTheme: 'auto' },
     (item) => {
+      const applyDarkMode = item.preferredTheme === 'dark'
+          || (item.preferredTheme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      applyTheme(applyDarkMode);
       if (item.preferredHadithLang === 'en') {
         hadithElement.style.direction = 'ltr';
         explanationElement.style.direction = 'ltr';
@@ -26,6 +29,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   );
 });
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => applyTheme(e.matches));
+
+function applyTheme(darkMode) {
+    if (darkMode) {
+        document.documentElement.classList.add('dark-mode');
+    } else {
+        document.documentElement.classList.remove('dark-mode');
+    }
+}
 
 document.querySelector('#go-to-options').addEventListener('click', function () {
   if (chrome.runtime.openOptionsPage) {
