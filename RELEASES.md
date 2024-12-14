@@ -1,5 +1,16 @@
 # Release Notes
 
+## [v1.5.0] - NOT YET
+
+### Added
+
+- Add option to allow the user selects the preferred theme (display color mode):
+  - **Auto**: Automatically adjusts to user system's color scheme preference (light or dark).
+  - **Light**: A light theme with a light background and dark text.
+  - **Dark**: A dark theme with a dark background and light text.
+
+---
+
 ## [v1.4.0] - 2024-11-11
 
 ### Added

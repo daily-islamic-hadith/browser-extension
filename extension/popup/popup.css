@@ -1,6 +1,20 @@
-/* styles.css */
+:root {
+  --background-color: #f9f9f9;
+  --heading-text-color: #333;
+  --container-bg-color: #fff;
+  --container-box-shadow-color: rgba(0, 0, 0, 0.5);
+  --text-color: #000000;
+  --btn-bg-color: #4caf50;
+  --btn-bg-hover-color: #45a049;
+  --btn-txt-color: white;
+}
+
+html.dark-mode {
+  filter: invert(1) brightness(0.8);
+}
+
 body {
-  background-color: #f9f9f9;
+  background-color: var(--background-color);
   margin: 0;
   padding: 10px;
   min-width: 500px;
@@ -19,15 +33,15 @@ body {
 
 .header h2 {
   margin: 0;
-  color: #333;
+  color: var(--heading-text-color);
 }
 
 #hadith-container {
   margin-top: 20px;
   padding: 10px;
-  background-color: #fff;
+  background-color: var(--container-bg-color);
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px var(--container-box-shadow-color);
 }
 
 #hadith,
@@ -36,6 +50,7 @@ body {
   font-size: 1.5em;
   font-family: 'Amiri', serif;
   direction: ltr;
+  color: var(--text-color);
 }
 
 details summary {
@@ -43,6 +58,7 @@ details summary {
   font-size: 1.2em;
   cursor: pointer;
   transition: all 0.3s ease;
+  color: var(--text-color);
 }
 
 #go-to-options {
@@ -56,13 +72,13 @@ details summary {
 button {
   margin-top: 15px;
   padding: 10px 20px;
-  background-color: #4caf50;
-  color: white;
+  background-color: var(--btn-bg-color);
+  color: var(--btn-txt-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: var(--btn-bg-hover-color);
 }

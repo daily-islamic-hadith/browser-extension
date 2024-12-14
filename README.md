@@ -12,6 +12,7 @@
 - **Simple and Clean UI**: Easy-to-use interface with minimalistic design.
 - **Language Support**: Supports multiple languages for Hadith display.
 - **Multiple Modes**: Supports multiple modes of displaying Hadith.
+- **Multiple Themes**: Supports multiple display themes for the extension.
 - **Open Source**: Contribute to the development or customize the extension for your needs.
 
 ## Changelog
