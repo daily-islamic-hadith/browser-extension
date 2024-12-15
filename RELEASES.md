@@ -9,6 +9,10 @@
   - **Light**: A light theme with a light background and dark text.
   - **Dark**: A dark theme with a dark background and light text.
 
+### Fixed
+- Empty display after migration from v1.3.0 to v1.4.0
+- Show Hadith Explanation container only after the fetch of hadith info from the backend server. 
+
 ---
 
 ## [v1.4.0] - 2024-11-11

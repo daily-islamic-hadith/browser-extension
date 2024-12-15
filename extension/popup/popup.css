@@ -53,6 +53,10 @@ body {
   color: var(--text-color);
 }
 
+#explanation-container {
+  display: none;
+}
+
 details summary {
   font-weight: bold;
   font-size: 1.2em;

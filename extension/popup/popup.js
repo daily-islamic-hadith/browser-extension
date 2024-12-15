@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const applyDarkMode = item.preferredTheme === 'dark'
           || (item.preferredTheme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
       applyTheme(applyDarkMode);
-      if (item.preferredHadithLang === 'en') {
+      if (item.preferredHadithLang === 'en' || item.preferredHadithLang === 'english') {
         hadithElement.style.direction = 'ltr';
         explanationElement.style.direction = 'ltr';
         summaryElement.style.direction = 'ltr';
@@ -62,7 +62,8 @@ function fetchHadith(
   )
     .then((response) => response.json())
     .then((data) => {
-      if (hadithLang === 'en') {
+      document.getElementById('explanation-container').style.display = 'block';
+      if (hadithLang === 'en' || hadithLang === 'english') {
         hadithElement.textContent = data.hadithEnglish;
         explanationElement.textContent = data.hadithExplanationEnglish;
       } else {
@@ -71,7 +72,7 @@ function fetchHadith(
       }
     })
     .catch((error) => {
-      if (hadithLang === 'en') {
+      if (hadithLang === 'en' || hadithLang === 'english') {
         hadithElement.textContent = 'Failed to load Hadith.';
         explanationElement.textContent = 'Failed to load explanation.';
       } else {
