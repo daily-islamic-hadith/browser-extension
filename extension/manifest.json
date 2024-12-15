@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Daily Islamic Hadith",
   "description": "Get daily Islamic hadith directly from your browser.",
-  "version": "1.5-SNAPSHOT",
+  "version": "1.5",
   "icons": {
     "16": "images/icon16.png",
     "32": "images/icon32.png",

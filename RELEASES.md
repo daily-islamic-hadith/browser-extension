@@ -1,6 +1,6 @@
 # Release Notes
 
-## [v1.5.0] - NOT YET
+## [v1.5.0] - 2024-12-15
 
 ### Added
 
