@@ -1,5 +1,13 @@
 # Release Notes
 
+## [v1.6.0] - NOT YET
+
+### Added
+- Add reminder to read hadith feature. 
+  - Shows red badge on the extension icon to remind user to read today's hadith if not already read.
+  - The reminder logic is executed every day at 12PM.
+---
+
 ## [v1.5.0] - 2024-12-15
 
 ### Added
