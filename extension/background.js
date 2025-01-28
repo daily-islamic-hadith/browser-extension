@@ -1,6 +1,6 @@
 const ALARM_TIME_HOUR_OF_DAY = 12; //12PM
 const ALARM_NAME = "dailyUnreadAlarm"
-const BADGE_COLOR = '#FF0000';
+const BADGE_COLOR = '#016efa';
 
 function setDailyUnreadAlarm() {
     const now = new Date();

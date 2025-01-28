@@ -2,15 +2,17 @@
   --background-color: #f9f9f9;
   --heading-text-color: #333;
   --container-bg-color: #fff;
-  --container-box-shadow-color: rgba(0, 0, 0, 0.5);
+  --container-box-shadow-color: rgba(0, 0, 0, 0.1);
   --text-color: #000000;
-  --btn-bg-color: #4caf50;
-  --btn-bg-hover-color: #45a049;
   --btn-txt-color: white;
 }
 
 html.dark-mode {
-  filter: invert(1) brightness(0.8);
+  --background-color: #2c2c2e;
+  --heading-text-color: #c7c7c7;
+  --container-bg-color:  rgb(10, 10, 10, 0.4);
+  --text-color: #c7c7c7;
+  --btn-txt-color:#c7c7c7;
 }
 
 body {
@@ -71,18 +73,4 @@ details summary {
   right: 10px;
   cursor: pointer;
   width: 48px;
-}
-
-button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: var(--btn-bg-color);
-  color: var(--btn-txt-color);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: var(--btn-bg-hover-color);
 }
