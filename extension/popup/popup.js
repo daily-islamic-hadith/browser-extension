@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+  resetUserInteraction();
   const hadithElement = document.getElementById('hadith');
   const explanationElement = document.getElementById('explanation');
   const summaryElement = document.getElementById('summary-title');
@@ -82,5 +83,13 @@ function fetchHadith(
           'حدث خطأ ما. يرجى المحاولة مرة أخرى في وقت لاحق.';
       }
       console.error('Error fetching Hadith:', error);
+    });
+}
+
+function resetUserInteraction() {
+    const date = new Date();
+    date.setHours(0, 0, 0, 0);
+    chrome.storage.local.set({lastInteractionDate: date.toISOString()}, function () {
+        chrome.action.setBadgeText({text: ''});
     });
 }
