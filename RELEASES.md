@@ -1,5 +1,11 @@
 # Release Notes
 
+## [v1.7.0] - NOT-YET
+
+### Added
+- Add link to the hadith web page in the popup screen.
+
+
 ## [v1.6.0] - 2025-01-28
 
 ### Added
