@@ -5,6 +5,9 @@
 ### Added
 - Add link to the hadith web page in the popup screen.
 
+### Fixed
+
+- The unread reminder badge was shown even if the user has already read the today's hadith.
 
 ## [v1.6.0] - 2025-01-28
 

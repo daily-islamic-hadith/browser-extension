@@ -19,8 +19,8 @@ function setDailyUnreadAlarm() {
 function checkInactivity() {
     const currentDate = new Date();
     currentDate.setHours(0, 0, 0, 0)
-    chrome.storage.local.get({lastInteraction: new Date(currentDate.getDate() - 1).toISOString()}, function (result) {
-        const lastInteraction = new Date(result.lastInteraction);
+    chrome.storage.local.get({lastInteractionDate: new Date(currentDate.getDate() - 1).toISOString()}, function (result) {
+        const lastInteraction = new Date(result.lastInteractionDate);
         if (lastInteraction < currentDate) {
             chrome.action.setBadgeText({text: '!'});
             chrome.action.setBadgeBackgroundColor({color: BADGE_COLOR});
