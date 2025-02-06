@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const hadithElement = document.getElementById('hadith');
   const explanationElement = document.getElementById('explanation');
   const summaryElement = document.getElementById('summary-title');
+  const referenceElement = document.getElementById('hadith-reference');
   // Fetch Hadith on page load
   chrome.storage.local.get(
     { preferredHadithLang: 'ar', preferredHadithFetchMode: 'daily', preferredTheme: 'auto' },
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
       fetchHadith(
         hadithElement,
         explanationElement,
+        referenceElement,
         item.preferredHadithLang,
         item.preferredHadithFetchMode
       );
@@ -49,9 +51,16 @@ document.querySelector('#go-to-options').addEventListener('click', function () {
   }
 });
 
+document.querySelector('#go-to-hadith').addEventListener('click', function () {
+    const reference = document.getElementById('hadith-reference');
+    const url = "https://dailyislamichadith.com" + (reference.value === "" ? "" : "/hadith/" + reference.value);
+    window.open(url, "_blank");
+});
+
 function fetchHadith(
   hadithElement,
   explanationElement,
+  referenceElement,
   hadithLang,
   hadithFetchMode
 ) {
@@ -71,6 +80,7 @@ function fetchHadith(
         hadithElement.textContent = data.hadithArabic;
         explanationElement.textContent = data.hadithExplanationArabic;
       }
+      referenceElement.value = data.reference;
     })
     .catch((error) => {
       if (hadithLang === 'en' || hadithLang === 'english') {
@@ -82,6 +92,7 @@ function fetchHadith(
         explanationElement.textContent =
           'حدث خطأ ما. يرجى المحاولة مرة أخرى في وقت لاحق.';
       }
+      referenceElement.value = '';
       console.error('Error fetching Hadith:', error);
     });
 }
