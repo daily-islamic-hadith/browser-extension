@@ -1,10 +1,10 @@
-# Daily Islamic Hadith Extensions
+# Daily Islamic Hadith Extension
 
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 ## Overview
 
-**Daily Islamic Hadith Extensions** is a browser extension designed to provide users with a daily Hadith. It aims to bring the wisdom and teachings of the Prophet Muhammad (peace be upon him) into your daily routine by displaying a new Hadith each day directly in your browser.
+**Daily Islamic Hadith Extension** is a browser extension designed to provide users with a daily Hadith. It aims to bring the wisdom and teachings of the Prophet Muhammad (peace be upon him) into your daily routine by displaying a new Hadith each day directly in your browser.
 
 ## Features
 
