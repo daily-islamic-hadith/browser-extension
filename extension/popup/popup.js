@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const explanationElement = document.getElementById('explanation');
   const summaryElement = document.getElementById('summary-title');
   const referenceElement = document.getElementById('hadith-reference');
+  const sourceElement = document.getElementById('source');
   // Fetch Hadith on page load
   chrome.storage.local.get(
     { preferredHadithLang: 'ar', preferredHadithFetchMode: 'daily', preferredTheme: 'auto' },
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         hadithElement,
         explanationElement,
         referenceElement,
+        sourceElement,
         item.preferredHadithLang,
         item.preferredHadithFetchMode
       );
@@ -61,6 +63,7 @@ function fetchHadith(
   hadithElement,
   explanationElement,
   referenceElement,
+  sourceElement,
   hadithLang,
   hadithFetchMode
 ) {
@@ -81,6 +84,7 @@ function fetchHadith(
         explanationElement.textContent = data.hadithExplanationArabic;
       }
       referenceElement.value = data.reference;
+      sourceElement.textContent = `Source: ${data.bookName} by ${data.bookWriterName}`;
     })
     .catch((error) => {
       if (hadithLang === 'en' || hadithLang === 'english') {
@@ -93,6 +97,7 @@ function fetchHadith(
           'حدث خطأ ما. يرجى المحاولة مرة أخرى في وقت لاحق.';
       }
       referenceElement.value = '';
+      sourceElement.textContent='';
       console.error('Error fetching Hadith:', error);
     });
 }

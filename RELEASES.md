@@ -4,6 +4,7 @@
 
 ### Added
 - Add link to the hadith web page in the popup screen.
+- Include a "Source" section in the popup screen to display the name of the hadith's book and its author.
 
 ### Fixed
 

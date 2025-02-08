@@ -67,6 +67,13 @@ details summary {
   color: var(--text-color);
 }
 
+#source {
+  text-align: center;
+  margin-top: 1rem;
+  font-style: italic;
+  color: var(--text-color);
+}
+
 #go-to-options {
   position: absolute;
   top: 10px;
